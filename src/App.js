@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Filters from './components/Filters';
+import TodoList from './components/TodoList';
+import { Divider } from 'antd';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        width: 500,
+        margin: '0 auto',
+        display: 'flex',
+        flexDirection: 'column',
+        backgroundColor: 'white',
+        padding: 20,
+        boxShadow: '0 0 10px 4px #bfbfbf',
+        borderRadius: 5,
+        height: '90vh',
+      }}
+    >
+      <h1 style={{ textAlign: 'center', marginBottom: 0 }}>Todo app of Andrew</h1>
+      <h3 style={{
+        textAlign: 'center',
+        margin: 0
+      }}>Ngô Quang Dũng</h3>
+
+      <Filters />
+      <Divider />
+      <TodoList />
     </div>
   );
 }
